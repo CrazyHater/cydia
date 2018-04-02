@@ -1,0 +1,9 @@
+Origin: Crazy's Repo
+Label: CrazyHater's Repo
+Suite: stable
+Version: 1.0
+Codename: Decimation
+Architectures: iphoneos-arm
+Components: main
+Description: Crazy's repo for iOS Cydia
+MD5Sum:
