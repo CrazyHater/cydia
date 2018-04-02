@@ -1,0 +1,10 @@
+Package: com.crazyhater.calllockxi
+Name: CallLock
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Always locks your phone after a call in case you hand if off to someone!
+Maintainer: Samar
+Author: Samar
+Section: Tweaks
+Version: 0.1-2+debug
+Installed-Size: 72
