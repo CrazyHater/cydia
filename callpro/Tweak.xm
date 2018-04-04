@@ -64,3 +64,29 @@
     return %orig;
   }
 }
+%end
+%hook DialerController
+-(void)_callButtonPressed:(id)arg1
+{
+  UIAlertController *callwarn = [UIAlertController alertControllerWithTitle:@"Think again!"
+                                                    message:@"You might not want to call this person, we gave you a second chance to think so you wont regret later!"
+                                                    preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *yesbutton = [UIAlertAction actionWithTitle:@"Continue"
+  style:UIAlertActionStyleDefault
+  handler:^(UIAleraction *action)
+  {
+    return %orig;
+  }];
+  UIAlertAction *cancelbutton = [UIAlerAction actionWithTitle:@"Cancel"
+  style:UIAlertActionStyleDefault
+  handler:^(UIAlertAction *action)
+  {
+    return;
+  }];
+  [callwarn addAction:yesbutton];
+  [callwarn addAction:cancelbutton];
+  [self presentViewController:callwarn animated:YES completion:nil];
+}
+
+}
+%end
