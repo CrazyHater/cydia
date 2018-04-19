@@ -1,8 +1,9 @@
-ARCHS = arm64
 include $(THEOS)/makefiles/common.mk
+
 TWEAK_NAME = CallPro
-CallLock_FILES = Tweak.xm
-CallLock_FRAMEWORKS = LocalAuthentication UIKit
+CallPro_FILES = Tweak.xm
+CallPro_FRAMEWORKS = UIKit LocalAuthentication
+
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
